@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div></div>
+    </div>
+    <div class="content">
+        <div class="topbar">
+            <div>
+                <img class="blogo logo" src="assets/logo.png">
+                <img class="slogo logo" src="assets/minlogo.png">
+            </div>
+            <nav>
+                <select name="language">
+                    <option value="eng">English</option>
+                    <option value="hindi">Hindi</option>
+                </select>
+                <a href="">Sign In</a>
+            </nav>
+        </div>
+        <div id="ani" class="showcase">
+            <div class="grd"></div>
+            <div class="adtxt">
+                <div class="bigtext">Unlimited movies, TV shows and more</div>
+                <div class="smalltext">Starts at ₹149. Cancel at any time.</div>
+            </div>
+            <button id="anibtn" onclick="ani()"><img src="assets/play.svg"></button>
+            
+            <script>
+                function ani(){
+                    var ani=document.getElementById("ani");
+                    if(ani.style.animationPlayState==="running"){
+                        ani.style.animationPlayState="paused";
+                        document.getElementById("anibtn").innerHTML="<img src=assets/play.svg>";
+                    }
+                    else{
+                        ani.style.animationPlayState="running";
+                        document.getElementById("anibtn").innerHTML="<img src=assets/pause.svg>";
+                    }
+                }
+            </script>
+        </div>
+        <div class="mail w80p">
+            <input type="text" placeholder="Email address">
+            <button>Get Started</button>
+        </div>
+        <div class="trending w80p">
+            <h1>Trending Now</h1>
+            <div class="slider">
+                <div><img src="assets/trend/1.webp"></div>
+                <div><img src="assets/trend/2.webp"></div>
+                <div><img src="assets/trend/3.webp"></div>
+                <div><img src="assets/trend/4.webp"></div>
+                <div><img src="assets/trend/5.webp"></div>
+                <div><img src="assets/trend/6.webp"></div>
+                <div><img src="assets/trend/7.webp"></div>
+                <div><img src="assets/trend/8.webp"></div>
+                <div><img src="assets/trend/9.webp"></div>
+                <div><img src="assets/trend/10.webp"></div>
+            </div>
+        </div>
+        <div class="netflix w80p">
+            <h1>Only On Netflix</h1>
+            <div class="slider">
+                <div><img src="assets/netflix/1.webp"></div>
+                <div><img src="assets/netflix/2.webp"></div>
+                <div><img src="assets/netflix/3.webp"></div>
+                <div><img src="assets/netflix/4.webp"></div>
+                <div><img src="assets/netflix/5.webp"></div>
+                <div><img src="assets/netflix/6.webp"></div>
+                <div><img src="assets/netflix/7.webp"></div>
+                <div><img src="assets/netflix/8.webp"></div>
+                <div><img src="assets/netflix/9.webp"></div>
+                <div><img src="assets/netflix/10.webp"></div>
+            </div>
+        </div>
+        <div class="w80p reason">
+            <h1>More Reason To Join</h1>
+            <Div>
+                <div>Stories tailored to your taste</div>
+                <div>Cancel or switch plans anytime</div>
+                <div>A place just for kids</div>
+                <div>For your phone, tablet, laptop and TV</div>
+            </Div>
+        </div>
+        <div class="w80p faq">
+            <h1>Frequently Asked Question</h1>
+            <div>
+                <div onclick="show(0)" class="que">What is Netflix? <img class="rotate" src="assets/plus.svg"></div>
+                <div class="ans ans1">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices. <br><br>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</div>
+            </div>
+            <div>
+                <div onclick="show(1)" class="que">How much does Netflix cost?<img class="rotate" src="assets/plus.svg"></div>
+                <div class="ans ans2">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</div>
+            </div>
+            <div>
+                <div onclick="show(2)" class="que">Where can I watch?<img class="rotate" src="assets/plus.svg"></div>
+                <div class="ans ans3">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. <br> <br>You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</div>
+            </div>
+            <div>
+                <div onclick="show(3)" class="que">How do I cancel?<img class="rotate" src="assets/plus.svg"></div>
+                <div class="ans ans4">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</div>
+            </div>
+            <div>
+                <div onclick="show(4)" class="que">What can I watch on Netflix?<img class="rotate" src="assets/plus.svg"></div>
+                <div class="ans ans5">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</div>
+            </div>
+            <div>
+                <div onclick="show(5)" class="que">Is Netflix good for kids?<img class="rotate" src="assets/plus.svg"></div>
+                <div class="ans ans6">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space. <br><br>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</div>
+            </div>
+            <script>
+                function show(no){
+                    var ele=document.getElementsByClassName("ans");
+                    var rot=document.getElementsByClassName("rotate");
+                    if(ele[no].style.display=="none"){
+                        ele[no].style.display="block";
+                        rot[no].style.rotate="45deg";
+                    }
+                    else{
+                        ele[no].style.display="none";
+                        rot[no].style.rotate="0deg";
+                    }
+                }
+            </script>
+        </div>
+        <div class="w80p getstrted">
+            <button>Get Started</button>
+        </div>
+        <div class="w80p footer">
+            <div>
+                <div class="help">Questions? Call <a href="tel:000-800-919-1694">000-800-919-1694</a> </div>
+                <div class="column">
+                    <div><a href="">FAQ</a></div><br>
+                    <div><a href="">Investor Relations</a></div><br>
+                    <div><a href="">privacy</a></div><br>
+                    <div><a href="">Speed Test</a></div><br>
+                    <div><a href="">Help Centre</a></div><br>
+                    <div><a href="">Jobs</a></div><br>
+                    <div><a href="">Cookie Preference</a></div><br>
+                    <div><a href="">Legal Notice</a></div><br>
+                    <div><a href="">Account</a></div><br>
+                    <div><a href="">Ways to Watch</a></div><br>
+                    <div><a href="">Corporate Information</a></div><br>
+                    <div><a href="">Only on Netflix</a></div><br>
+                    <div><a href="">Media Centre</a></div><br>
+                    <div><a href="">Terms of Use</a></div><br>
+                    <div><a href="">Contact Us</a></div><br> 
+                </div>
+                <select name="" id="">
+                    <option value="eng">English</option>
+                    <option value="hindi">Hindi</option>
+                </select>
+                <br>
+                Netflix India
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
